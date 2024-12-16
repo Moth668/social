@@ -1,6 +1,7 @@
 # Module 17 Challenge Social Network API: social 👨‍💻
 
 ## Table of Contents
+
 [Task](#task)
 [User Story](#user-story)
 [Acceptance Criteria](#acceptance-criteria)
@@ -10,16 +11,18 @@
 [Video](#video)
 [Repository](#repository)
 
-
 ## Task
-My task was to create a social media api program that will use MongoDB so that users can add friends to their friends list, share thoughts with eachother, and react to friends' thoughts. 
+
+My task was to create a social media api program that will use MongoDB so that users can add friends to their friends list, share thoughts with eachother, and react to friends' thoughts.
 
 ## User Story
+
 AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 
 ## Acceptance Criteria
+
 GIVEN a social network API
 WHEN I enter the command to invoke the application
 THEN my server is started and the Mongoose models are synced to the MongoDB database
@@ -57,6 +60,7 @@ POST /api/thoughts/:thoughtId/reactions: Add a reaction to a thought.
 DELETE /api/thoughts/:thoughtId/reactions/:reactionId: Remove a reaction by reactionId.
 
 Technologies Used (including but not limited to):
+
 - VS Code
 - GitBash
 - GitHub
@@ -68,13 +72,17 @@ Technologies Used (including but not limited to):
 - Mongoose ODM
 - JavaScript
 - Insomnia
-
+- OBS
+- Youtube
 
 ## 📝 Notes
+
 Make friends, share your thoughts, grow your network!
 
 ## 🎥 Video
-This link will take you to the video walkthrough of this application.
+
+This link will take you to the video walkthrough of this application: https://www.youtube.com/watch?v=vxfx-BJLFj4
 
 ## Repository
+
 This link will take you to my GitHub Repository: https://github.com/Moth668/social
