@@ -1,12 +1,22 @@
-router.route('/')
-    .get(getUsers) // GET all users
-    .post(createUser); // POST a new user
+import express from 'express';
+import { getUsers, createUser, getUserById, updateUser, deleteUser, addFriend, removeFriend } 
+    from '../../controllers/userController.js';
+
+
+
+const router = express.Router();
+
+router.route('/').get(getUsers).post(createUser);
 
 router.route('/:id')
-    .get(getUserById) // GET a single user by ID
-    .put(updateUser) // PUT to update a user
-    .delete(deleteUser); // DELETE a user and their thoughts
+    .get(getUserById)
+    .put(updateUser)
+    .delete(deleteUser);
 
-router.route('/:userId/friends/:friendId')
-    .post(addFriend) // POST to add a friend
-    .delete(removeFriend); // DELETE a friend
+    router.route('/:userId/friends/:friendId')
+    .post(addFriend)
+    .delete(removeFriend);
+
+    router.get('/test', (req, res) => res.send('Test route works!'));
+
+export default router;

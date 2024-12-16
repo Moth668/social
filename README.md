@@ -5,6 +5,7 @@
 [User Story](#user-story)
 [Acceptance Criteria](#acceptance-criteria)
 [Additional Information](#additional-information)
+[API Endpoints](#api-endpoints)
 [Notes](#notes)
 [Video](#video)
 [Repository](#repository)
@@ -31,12 +32,11 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Additional Information
 
-npm nodemon server.js
+npm run dev
 
 Use Insomnia to test the API endpoints. The server runs on http://localhost:3001.
 
-API Endpoints
-Back to Table of Contents
+## API Endpoints
 
 User Routes
 GET /api/users: Get all users.
@@ -64,6 +64,7 @@ Technologies Used (including but not limited to):
 - Node.js
 - Express.js
 - MongoDB
+- Compass
 - Mongoose ODM
 - JavaScript
 - Insomnia
@@ -76,4 +77,4 @@ Make friends, share your thoughts, grow your network!
 This link will take you to the video walkthrough of this application.
 
 ## Repository
-This link will take you to my GitHub Repository.
+This link will take you to my GitHub Repository: https://github.com/Moth668/social
