@@ -1,15 +1,15 @@
-const { User, Thought } = require('../models');
+import { User, Thought } from '../models/index.js';
 
-module.exports = {
-    async getUsers(req, res) {
+    export const getUsers = async (req, res) => {
         try {
-            const users = await User.find().populate('thoughts').populate('friends');
-            res.json(users);
+            const users = await User.find(); // Fetch all users
+            res.json(users); // Send back the user data
         } catch (err) {
-            res.status(500).json(err);
+            res.status(500).json({ error: err.message });
         }
-    },
-    async getUserById(req, res) {
+    }
+    
+    export const getUserById = async (req, res) => {
         try {
             const user = await User.findById(req.params.id).populate('thoughts').populate('friends');
             if (!user) {
@@ -19,24 +19,24 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    },
-    async createUser(req, res) {
+    }
+    export const createUser = async (req, res) => {
         try {
             const user = await User.create(req.body);
             res.json(user);
         } catch (err) {
             res.status(500).json(err);
         }
-    },
-    async updateUser(req, res) {
+    }
+    export const updateUser = async (req, res) => {
         try {
             const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
             res.json(user);
         } catch (err) {
             res.status(500).json(err);
         }
-    },
-    async deleteUser(req, res) {
+    }
+    export const deleteUser = async (req, res) => {
         try {
             const user = await User.findByIdAndDelete(req.params.id);
             if (!user) {
@@ -48,8 +48,8 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    },
-    async addFriend(req, res) {
+    }
+    export const addFriend = async (req, res) => {
         try {
             const user = await User.findByIdAndUpdate(
                 req.params.userId,
@@ -60,8 +60,8 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    },
-    async removeFriend(req, res) {
+    }
+    export const removeFriend = async (req, res) => {
         try {
             const user = await User.findByIdAndUpdate(
                 req.params.userId,
@@ -72,5 +72,4 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    },
-};
+    }
